@@ -1,9 +1,19 @@
-list_1 = ['rich', 'richiest', 'orichalcum', 'cheers', 'richies']
-list_2 = ['Disablement', 'Able', 'Mable', 'Disable', 'Bagel']
-def single_root_words(root_word, *other_words):
+list_1 = ('rich', 'richiest', 'orichalcum', 'cheers', 'richies')
+list_2 = ('Disablement', 'Able', 'Mable', 'Disable', 'Bagel')
+
+def single_root_words(root_word, *,other_words):
     same_words = []
-    for i in len(list_1):
-        if i in list_1 == list_1.count(list_1[0]):
+
+    for i in (other_words):
+        if root_word in i or i in root_word:
             same_words.append(i)
-            print(same_words)
-            
+        if root_word in same_words:
+            same_words.remove(root_word)
+
+
+    print(same_words)
+    return same_words
+
+single_root_words(list_1[0], other_words=list_1)
+single_root_words(list_2[0], other_words=list_2)
+
