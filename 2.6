@@ -5,17 +5,14 @@ def single_root_words(root_word, *, other_words):
     same_words = []
 
     for i in other_words:
-        if root_word in i or i in root_word:
+        other_words = i.lower()
+        if root_word.lower() in other_words or other_words in root_word.lower():
             same_words.append(i)
         if root_word in same_words:
             same_words.remove(root_word)
-
     print(same_words)
     return same_words
-
 
 single_root_words(list_1[0], other_words=list_1)
 
 single_root_words(list_2[0], other_words=list_2)
-
-
